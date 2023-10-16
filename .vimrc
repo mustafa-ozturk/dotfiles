@@ -10,7 +10,7 @@ set colorcolumn=80        " Highlight 80 character limit
 " Colors
 hi LineNr ctermfg=grey                  " Line number color 
 hi Visual cterm=none ctermbg=darkgrey   " Visual select color
-hi ColorColumn ctermbg=darkgrey        " Column limit color
+hi ColorColumn ctermbg=darkgrey         " Column limit color
 
 
 " Tab completion settings
