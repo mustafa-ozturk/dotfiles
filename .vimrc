@@ -2,7 +2,6 @@ set nocompatible
 
 syntax off
 
-set hlsearch
 set ruler
 set laststatus=2 
 set number
@@ -21,3 +20,8 @@ set wildignore+=*.swp         " Ignore vim backups
 " Tab settings
 set expandtab     " Space instead of tab character
 set tabstop=4     " Tabs width in spaces
+
+" Search settings
+set hlsearch   " highlight results
+set incsearch  " Start showing results as you type
+
