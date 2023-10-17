@@ -16,9 +16,11 @@ hi MatchParen cterm=none ctermbg=darkgrey   " Matched paren highlight color
 
 " Tab completion settings
 set wildmenu
-set wildmode=list:longest     " Wildcard matches show a list, matching the longest first
-set wildignore+=.git,.hg,.svn " Ignore version control repos
-set wildignore+=*.swp         " Ignore vim backups
+set wildmode=list:longest           " Wildcard matches show a list, matching the longest first
+set wildignore+=.git,.hg,.svn       " Ignore version control repos
+set wildignore+=*.swp               " Ignore vim backups
+set wildignore=*/node_modules/*     " Igonore node modules
+
 
 " Tab settings
 set expandtab     " Space instead of tab character
