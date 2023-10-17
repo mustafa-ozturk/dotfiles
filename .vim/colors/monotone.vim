@@ -118,7 +118,7 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	endfunction
 
 	" Main colors
-	call s:Hi('Normal', s:color_normal, s:color_dark_3, 252, 233, 'NONE')
+	call s:Hi('Normal', s:color_normal, s:color_dark_3, 252, 0, 'NONE')
 	call s:Hi('Visual', s:color_dark_3, s:color_normal, 16, 248, 'NONE')
 
 	" Cursors
