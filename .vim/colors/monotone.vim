@@ -5,7 +5,7 @@
 " Copyright 2018 Kim Silkebækken
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
-" of this software and associated documentation files (the "Software"), to
+" of this software and associated documentation files (the "Software"), to 
 " deal in the Software without restriction, including without limitation the
 " rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
 " sell copies of the Software, and to permit persons to whom the Software is
@@ -212,48 +212,6 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	hi clear PreProc
 	hi clear Special
 	hi clear Noise
-
-	" Plugin-specific highlighting
-	hi link CursorWordHighlight Underlined
-	hi link CocHighlightText Underlined
-
-	" ALE
-	hi ALEError       guisp=#ff4444 gui=undercurl ctermfg=203 cterm=underline
-	hi ALEWarning     guisp=#dd9922 gui=undercurl ctermfg=214 cterm=underline
-	hi ALEErrorSign   guifg=#ff4444 ctermfg=203
-	hi ALEWarningSign guifg=#dd9922 ctermfg=214
-
-	" Spelling
-	hi clear SpellBad
-	hi clear SpellCap
-	hi clear SpellRare
-	hi clear SpellLocal
-	hi link SpellBad   ALEError
-	hi link SpellCap   ALEError
-	hi link SpellRare  ALEError
-	hi link SpellLocal ALEWarning
-
-	" COC
-	hi CocErrorHighlight   guisp=#ff4444 gui=undercurl ctermfg=203 cterm=underline
-	hi CocWarningHighlight guisp=#dd9922 gui=undercurl ctermfg=214 cterm=underline
-	hi CocInfoHighlight    guisp=#00afff gui=undercurl ctermfg=153 cterm=underline
-	hi CocHintHighlight    guisp=#00afff gui=undercurl ctermfg=153 cterm=underline
-	hi CocErrorSign        guifg=#ff4444 ctermfg=203
-	hi CocWarningSign      guifg=#dd9922 ctermfg=214
-	hi CocInfoSign         guifg=#00afff ctermfg=153
-	hi CocHintSign         guifg=#00afff ctermfg=153
-
-	" Sneak
-	call s:Hi('Sneak', '#000000', s:color_hl_3, 16, 153, 'NONE')
-	call s:Hi('SneakLabel', '#000000', s:color_hl_3, 16, 153, 'bold')
-	call s:Hi('SneakLabelMask', s:color_hl_3, s:color_hl_3, 153, 153, 'NONE')
-
-	" QuickScope
-	hi QuickScopePrimary gui=underline guisp=#ff4444
-	hi QuickScopeSecondary gui=underline guisp=#ff4444
-
-	" Highlightedyank
-	hi link HighlightedyankRegion Warning
 endfunction
 
 call s:MonotoneColors(
