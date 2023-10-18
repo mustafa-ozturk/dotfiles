@@ -21,6 +21,9 @@ set tabstop=4     " Tabs width in spaces
 set hlsearch   " highlight results
 set incsearch  " Start showing results as you type
 
+set clipboard=unnamed   " yank into clipboard
+
+
 " Colors
 syntax on
 colorscheme monotone
