@@ -6,6 +6,7 @@ set number
 set colorcolumn=80        " Highlight 80 character limit
 set noswapfile
 set clipboard=unnamed   " yank into clipboard
+set showcmd
 
 " Tab completion settings
 set wildmenu
