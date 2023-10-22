@@ -1,12 +1,14 @@
 set nocompatible 
-
+                
 set ruler
 set laststatus=2 
 set number
-set colorcolumn=80        " Highlight 80 character limit
+set colorcolumn=80                  " Highlight 80 character limit
 set noswapfile
-set clipboard=unnamed   " yank into clipboard
+set clipboard=unnamed               " yank into clipboard
 set showcmd
+set list                            " Show invisible characters
+set listchars=tab:›\ ,eol:¬,trail:⋅ " Set the characters for the invisibles
 
 " Tab completion settings
 set wildmenu
@@ -25,4 +27,9 @@ set incsearch  " Start showing results as you type
 
 " Colors
 syntax on
-colorscheme monotone
+let &t_ut='' " see: https://sw.kovidgoyal.net/kitty/faq/#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
+set t_Co=256 " use 256 colors
+set bg=dark
+colorscheme gruvbox
+" This is required to force 24-bit color since I use a modern terminal.
+set termguicolors
