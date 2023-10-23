@@ -33,3 +33,8 @@ set bg=dark
 colorscheme gruvbox
 " This is required to force 24-bit color since I use a modern terminal.
 set termguicolors
+
+" use ftplugin if this gets too much
+" need js suffix for gf
+autocmd Filetype javascript setlocal suffixesadd=.js
+
