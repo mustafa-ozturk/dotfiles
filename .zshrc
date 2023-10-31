@@ -10,3 +10,5 @@ alias gcp="git checkout"
 alias gp="git push"
 alias gs="git status"
 
+# z (homebrew)
+. /usr/local/etc/profile.d/z.sh
