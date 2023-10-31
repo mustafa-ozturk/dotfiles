@@ -10,6 +10,8 @@ set showcmd
 set list                            " Show invisible characters
 set listchars=tab:›\ ,eol:¬,trail:⋅ " Set the characters for the invisibles
 
+let g:netrw_liststyle=3             " netrw liststyle
+
 " Tab completion settings
 set wildmenu
 set wildmode=list:longest           " Wildcard matches show a list, matching the longest first
