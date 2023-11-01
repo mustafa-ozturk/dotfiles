@@ -9,6 +9,8 @@ set clipboard=unnamed               " yank into clipboard
 set showcmd
 set list                            " Show invisible characters
 set listchars=tab:›\ ,eol:¬,trail:⋅ " Set the characters for the invisibles
+set splitbelow                      " Splits show up below by default
+set splitright                      " Splits go to the right by default
 
 let g:netrw_liststyle=3             " netrw liststyle
 
