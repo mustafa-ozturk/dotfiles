@@ -1,5 +1,6 @@
 set nocompatible 
-                
+
+
 set ruler
 set laststatus=2 
 set number
@@ -12,6 +13,7 @@ set listchars=tab:›\ ,eol:¬,trail:⋅ " Set the characters for the invisibles
 set splitbelow                      " Splits show up below by default
 set splitright                      " Splits go to the right by default
 
+let mapleader=";"                   " The <leader> key
 let g:netrw_liststyle=3             " netrw liststyle
 
 " Tab completion settings
