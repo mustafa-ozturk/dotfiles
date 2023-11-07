@@ -56,6 +56,8 @@ call plug#begin()
 Plug 'junegunn/vim-plug' " vim-plug help
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
