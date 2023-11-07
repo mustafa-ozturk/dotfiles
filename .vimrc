@@ -31,6 +31,8 @@ set tabstop=4     " Tabs width in spaces
 set hlsearch   " highlight results
 set incsearch  " Start showing results as you type
 
+" remaps
+nnoremap <C-p> :GFiles<Cr>
 
 " use ftplugin if this gets too much
 " need js suffix for gf
