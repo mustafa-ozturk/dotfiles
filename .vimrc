@@ -31,14 +31,6 @@ set tabstop=4     " Tabs width in spaces
 set hlsearch   " highlight results
 set incsearch  " Start showing results as you type
 
-" Colors
-syntax on
-let &t_ut='' " see: https://sw.kovidgoyal.net/kitty/faq/#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
-set t_Co=256 " use 256 colors
-set bg=dark
-colorscheme gruvbox
-" This is required to force 24-bit color since I use a modern terminal.
-set termguicolors
 
 " use ftplugin if this gets too much
 " need js suffix for gf
@@ -62,6 +54,16 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin()
 
 Plug 'junegunn/vim-plug' " vim-plug help
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
+
+" Colors
+syntax on
+let &t_ut='' " see: https://sw.kovidgoyal.net/kitty/faq/#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
+set t_Co=256 " use 256 colors
+set bg=dark
+colorscheme gruvbox
+" This is required to force 24-bit color since I use a modern terminal.
+set termguicolors
