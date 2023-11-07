@@ -33,6 +33,7 @@ set incsearch  " Start showing results as you type
 
 " remaps
 nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-g> :Rg<Cr>
 
 " use ftplugin if this gets too much
 " need js suffix for gf
