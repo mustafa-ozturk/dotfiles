@@ -62,14 +62,22 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
-" Colors
-syntax on
+" fix gitgutter background color
+let g:gitgutter_override_sign_column_highlight=1
+
+" ----------------------------------------------------------------------------
+" COLORS
+" ----------------------------------------------------------------------------
+syntax enable
 let &t_ut='' " see: https://sw.kovidgoyal.net/kitty/faq/#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
 set t_Co=256 " use 256 colors
-set bg=dark
+set background=dark
 colorscheme gruvbox
-" This is required to force 24-bit color since I use a modern terminal.
+
+" This is required to force 24-bit color for modern terminals
 set termguicolors
+
