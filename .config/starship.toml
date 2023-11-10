@@ -19,11 +19,11 @@ $line_break\
 $character"""
 
 [directory]
-style = "grey"
+style = "blue"
 
 [character]
-success_symbol = "[❯](light-grey)"
-error_symbol = "[❯](dark-grey)"
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
@@ -43,8 +43,9 @@ stashed = "≡"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "white"
+style = "bright-black"
 
 [cmd_duration]
 format = "[$duration]($style) "
-style = "dark-grey"
+style = "yellow"
+
