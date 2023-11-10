@@ -68,7 +68,8 @@ call plug#end()
 
 " fix gitgutter background color
 let g:gitgutter_override_sign_column_highlight=1
-
+" fix vim-airline symbols (without installing bloated fonts)
+let g:airline_symbols_ascii = 1
 " ----------------------------------------------------------------------------
 " COLORS
 " ----------------------------------------------------------------------------
