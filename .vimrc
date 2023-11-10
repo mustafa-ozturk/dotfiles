@@ -6,7 +6,7 @@ set laststatus=2
 set number
 set colorcolumn=80                  " Highlight 80 character limit
 set noswapfile
-set clipboard=unnamed               " yank into clipboard
+set clipboard=unnamedplus           " yank into clipboard
 set showcmd
 set list                            " Show invisible characters
 set listchars=tab:›\ ,eol:¬,trail:⋅ " Set the characters for the invisibles
@@ -70,6 +70,11 @@ call plug#end()
 let g:gitgutter_override_sign_column_highlight=1
 " fix vim-airline symbols (without installing bloated fonts)
 let g:airline_symbols_ascii = 1
+  
+" temp workaround for clipboard support in wayland when using unamedplus
+" https://github.com/vim/vim/issues/5157
+autocmd TextYankPost * call system("wl-copy", get(v:event, 'regcontents'))
+nnoremap p :silent put =system('wl-paste')<CR>
 " ----------------------------------------------------------------------------
 " COLORS
 " ----------------------------------------------------------------------------
