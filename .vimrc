@@ -24,8 +24,10 @@ set wildignore+=*.swp               " Ignore vim backups
 set wildignore=*/node_modules/*     " Igonore node modules
 
 " Tab settings
-set expandtab     " Space instead of tab character
+set expandtab     " Expand tabs to the proper type and size
 set tabstop=4     " Tabs width in spaces
+set softtabstop=4 " Soft tab width in spaces
+set shiftwidth=4  " Amount of spaces when shifting
 
 " Search settings
 set hlsearch   " highlight results
