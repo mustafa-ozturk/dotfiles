@@ -75,8 +75,9 @@ let g:airline_symbols_ascii = 1
   
 " temp workaround for clipboard support in wayland when using unamedplus
 " https://github.com/vim/vim/issues/5157
-autocmd TextYankPost * call system("wl-copy", get(v:event, 'regcontents'))
-nnoremap p :silent put =system('wl-paste')<CR>
+autocmd TextYankPost * if (v:event.operator == 'y' || v:event.operator == 'd') | silent! execute 'call system("wl-copy", @")' | endif
+nnoremap p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+
 " ----------------------------------------------------------------------------
 " COLORS
 " ----------------------------------------------------------------------------
