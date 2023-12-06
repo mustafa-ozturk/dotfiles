@@ -1,5 +1,4 @@
-# Default config for sway
-#
+# Default config for sway #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
@@ -64,7 +63,10 @@ output * bg ~/wallpapers/smoky-black.jpg fill
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-
+input "1267:32:Elan_Touchpad" {
+    tap enabled
+    natural_scroll enabled
+}
 ### Key bindings
 #
 # Basics:
