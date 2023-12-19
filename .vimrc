@@ -3,7 +3,7 @@ set nocompatible
 
 set ruler
 set laststatus=2 
-set number
+set number relativenumber
 set colorcolumn=80                  " Highlight 80 character limit
 set noswapfile
 set clipboard=unnamedplus           " yank into clipboard
