@@ -65,6 +65,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -72,7 +73,10 @@ call plug#end()
 let g:gitgutter_override_sign_column_highlight=1
 " fix vim-airline symbols (without installing bloated fonts)
 let g:airline_symbols_ascii = 1
-  
+
+" vimtex 
+let g:vimtex_view_method = 'zathura'
+
 " temp workaround for clipboard support in wayland when using unamedplus
 " https://github.com/vim/vim/issues/5157
 autocmd TextYankPost * if (v:event.operator == 'y' || v:event.operator == 'd') | silent! execute 'call system("wl-copy", @")' | endif
