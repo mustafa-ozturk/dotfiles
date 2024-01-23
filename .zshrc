@@ -12,13 +12,17 @@ alias gs="git status"
 
 function work() {
     shifts=0
+    echo "Workers! Today, you forge your tomorrow!"
     while true
     do 
         ((shifts++))
-        notify-send "Arise! Fight for the glorious future." "shift: $shifts"
-        echo "shift: $shifts"
+        date=$(date +%I:%M%p)
+        notify-send "$date | shift: $shifts" "Arise! Fight for the glorious future." \
+            -t 60000 -u "critical"
         sleep 25m
-        notify-send "Workers! Put down your tools."
+        echo "$date | shift: $shifts"
+        notify-send "$date | shift: $shifts" "Workers! Put down your tools." \
+            -t 60000 -u "critical"
         sleep 5m
     done
 }
