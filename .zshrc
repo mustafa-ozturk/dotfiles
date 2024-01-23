@@ -10,6 +10,19 @@ alias gcp="git checkout"
 alias gp="git push"
 alias gs="git status"
 
+function work() {
+    shifts=1
+    while true
+    do 
+        notify-send "Arise! Fight for the glorious future." "shift: $shifts"
+        echo "shift: $shifts"
+        sleep 1m
+        notify-send "Workers! Put down your tools."
+        sleep 1m
+        ((shifts++))
+    done
+}
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
