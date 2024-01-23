@@ -11,15 +11,15 @@ alias gp="git push"
 alias gs="git status"
 
 function work() {
-    shifts=1
+    shifts=0
     while true
     do 
+        ((shifts++))
         notify-send "Arise! Fight for the glorious future." "shift: $shifts"
         echo "shift: $shifts"
-        sleep 1m
+        sleep 25m
         notify-send "Workers! Put down your tools."
-        sleep 1m
-        ((shifts++))
+        sleep 5m
     done
 }
 
