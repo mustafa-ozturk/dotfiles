@@ -12,7 +12,7 @@ alias gs="git status"
 
 function work() {
     shifts=0
-    echo "Workers! Today, you forge your tomorrow!"
+    echo $(date +%I:%M%p) " | Workers! Today, you forge your tomorrow!"
     while true
     do 
         ((shifts++))
