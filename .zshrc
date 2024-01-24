@@ -21,6 +21,7 @@ function work() {
             -t 60000 -u "critical"
         aplay recordings/start.wav -q 
         sleep 25m
+        date=$(date +%I:%M%p)
         echo "$date | Shift: $shifts completed."
         notify-send "$date | Shift: $shifts" "Shift ends. Workers! Enjoy your well earned rest." \
             -t 60000 -u "critical"
