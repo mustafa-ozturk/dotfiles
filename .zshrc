@@ -12,22 +12,35 @@ alias gs="git status"
 
 function work() {
     shifts=0
+    con=true
     echo $(date +%I:%M%p) "| Work session started."
-    while true
-    do 
+    while $con; do
         ((shifts++))
         date=$(date +%I:%M%p)
+
         notify-send "$date | Shift: $shifts" "Workers! Today you forge your tomorrow!" \
             -t 60000 -u "critical"
         aplay recordings/start.wav -q 
-        sleep 25m
+        sleep 20m 
+
+
+        date=$(date +%I:%M%p)
+        notify-send "$date | Shift: $shifts | 5 minutes remaning. " "No Time to waste! We've got work to do." \
+            -t 60000 
+        aplay recordings/5remaining.wav -q 
+        sleep 5m
+
         date=$(date +%I:%M%p)
         echo "$date | Shift: $shifts completed."
         notify-send "$date | Shift: $shifts" "Shift ends. Workers! Enjoy your well earned rest." \
             -t 60000 -u "critical"
         aplay recordings/end.wav -q
         sleep 5m
+
+        echo -n "Ready for the next shift? (press any key): "
+        read
     done
+    exit 1
 }
 
 # Lines configured by zsh-newuser-install
