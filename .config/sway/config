@@ -71,6 +71,7 @@ exec swayidle -w \
 input "1267:32:Elan_Touchpad" {
     tap disabled
     natural_scroll enabled
+    scroll_factor 0.5
 }
 
 input "1:1:AT_Translated_Set_2_keyboard" {
