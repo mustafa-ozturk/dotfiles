@@ -57,3 +57,7 @@ compinit
 # End of lines added by compinstall
 
 export GIT_EDITOR=vim
+
+path+=('/home/moz/m/projects/lop')
+
+export PATH
